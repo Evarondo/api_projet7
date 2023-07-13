@@ -54,7 +54,7 @@ async def get_client_info(client_id: int):
             "Statut familial:": statut_fam,
             "Type de contrat:": type_contrat,
             "Montant du crédit:": montant_credit,
-            "Score du client:": client_proba,
+            "Score du client:": round(client_proba, 3),
             "Position du client par rapport au seuil:": position
         }
 
