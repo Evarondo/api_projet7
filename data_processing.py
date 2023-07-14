@@ -130,10 +130,10 @@ def bivarié_plot(feature1, feature2, df, client_value):
     score = df['Proba']
     
     # Données des deux fonctionnalités
-    data_features = df[[feature1, feature2]]
+    data_features = df[[feature1, feature2, 'SK_ID_CURR']]
     
     # Positions des clients
-    client_positions = data_features[data_features.index == client_value]
+    client_positions = data_features[data_features['SK_ID_CURR'] == client_value]
     
     # Scatter plot
     plt.figure(figsize=(10, 6))
