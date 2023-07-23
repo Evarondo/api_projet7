@@ -30,6 +30,8 @@ jobs:
       run: curl https://cli-assets.heroku.com/install.sh | sh
 
     - name: Login to Heroku
+      env:
+        heroku_api_key: ${{ secrets.HEROKU_API_KEY}}
       run: heroku login -i
 
     - name: Deploy to Heroku
